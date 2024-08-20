@@ -1,0 +1,314 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("https://avatars.mds.yandex.net/i?id=b2b456245b19303bf40c0e7f12cbb7cf_l-5287630-images-thumbs&ref=rim&n=13&w=700&h=700"); /*  Ваша ссылка */
+    background-size: cover; /* Покрывает всю область */
+    background-repeat: no-repeat; /* Без повторения */
+    background-position: center; /* Центрирование изображения */
+    background-attachment: fixed; /* Фиксированное положение при прокрутке */
+    overflow: hidden; /* Скрывает прокрутку */
+}
+
+/* Остальные стили остаются без изменений */
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #080808;
+}
+
+.rectangle {
+    width: 250px;
+    height: 545px;
+    background-color: #000000;
+    margin: 50px auto;
+    border-radius: 10px; 
+}
+
+.rectangle::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+}
+
+/* ... ваш текущий код ... */
+
+.text {
+    position: absolute;
+    top: 70px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    color: rgba(255, 255, 255, 0.9); /* Белый цвет с 90% непрозрачностью */
+    font-size: 34px; 
+    font-weight: bold; 
+    z-index: 10; 
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.5); /* Добавляем размытие к тексту */
+}
+
+/* ... ваш текущий код ... */
+
+.button {
+    width: 100px;
+    height: 100px;
+    background-color: #ffffff; /* Зеленый цвет */
+    border-radius: 50%; /* Делаем круг */
+    position: absolute;
+    top: 150px; /* Позиционируем кнопку немного ниже текста */
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer; /* Изменяем курсор на указатель */
+    z-index: 1;
+}
+
+.counter {
+    position: absolute;
+    top: 160px; /* Позиционируем счетчик немного выше кнопки */
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 30px;
+    z-index: 2;
+}
+
+
+/* ... ваш текущий код ... */
+
+.button {
+    width: 200px; /* Увеличиваем ширину */
+    height: 200px; /* Увеличиваем высоту */
+    background-color: #ffffff; 
+    border-radius: 50%; 
+    position: absolute;
+    top: 250px; /* Перемещаем кнопку ниже */
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer; 
+    z-index: 1;
+}
+
+.admin-button {
+    position: absolute;
+    top: 50px; /* Положение сверху */
+    left: 30px; /* Положение слева */
+    background-color: #0a0a0a; /* Зеленый цвет */
+    color: white; /* Белый текст */
+    border: none;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px; /* Закругленные углы */
+    display: none; /* Сначала скройте кнопку */
+    z-index: 100; /* Перемещаем на самый верхний слой */
+}
+
+.admin-panel {
+    position: fixed; /* Фиксированное положение */
+    bottom: 20px; /* Положение снизу */
+    left: 50%; /* Положение по горизонтали */
+    transform: translateX(-50%); /* Центрирование */
+    background-color: #fff; /* Белый цвет */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Тень */
+}
+
+.admin-panel button {
+    margin: 5px; /* Отступ между кнопками */
+}
+
+/* ... ваши существующие стили ... */
+
+.menu-button {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 100; /* Обеспечьте, чтобы кнопка была сверху */
+    /* display: none; */  /* Убираем эту строку */
+}
+
+.bars {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: white;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный */
+    z-index: 99; /* Обеспечьте, чтобы наложение было под кнопкой */
+    display: none; /* Сначала скройте наложение */
+}
+
+.close-button {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 100; /* Обеспечьте, чтобы кнопка была сверху */
+    display: none; /* Сначала скройте кнопку закрытия */
+}
+
+.cross {
+    display: block;
+    width: 20px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: white;
+    transform-origin: center;
+}
+
+.cross:first-child {
+    transform: rotate(45deg);
+}
+
+.cross:last-child {
+    transform: rotate(-45deg);
+}
+
+.transfer-button {
+    position: absolute;
+    top: 10px; 
+    left: 120px; /* Положение слева */
+    background-color: #0a0a0a; /* Зеленый цвет */
+    color: white; /* Белый текст */
+    border: none;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px; /* Закругленные углы */
+    /* display: none; */ /* Убираем эту строку */
+    z-index: 100; /* Перемещаем на самый верхний слой */
+}
+
+.code-element {
+    position: absolute;
+    top: 10px; /* Положение снизу кнопки */
+    left: 130px; /* Положение слева */
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* ... your existing styles ... */
+
+.shop-button {
+    position: absolute;
+    top: 200px; /* Adjust position as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #0a0a0a;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px; 
+    z-index: 100; /* Make sure it's on top */
+}
+
+.shop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    border-radius: 10px;
+}
+
+.shop-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 101;
+    display: flex;
+    flex-wrap: wrap; /*  Разрешаем перенос элементов на следующую строку */
+    justify-content: center; /*  Центрируем элементы по горизонтали */
+    gap: 10px; /*  Добавляем отступы между элементами */
+    overflow-y: auto; /*  Добавляем вертикальную прокрутку */
+    height: 300px; /*  Устанавливаем высоту для области прокрутки */
+}
+
+.item {
+    width: calc(33.33% - 20px); /*  Занимаем 1/3 ширины, минус отступы */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.item img {
+    width: 80px;  /*  Уменьшаем ширину изображения */
+    height: 80px; /*  Уменьшаем высоту изображения */
+}
+
+/* ... ваши существующие стили ... */
+
+.shop-close-button {
+    position: absolute;
+    top: 10px;
+    right: 330px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 101; /* Убедитесь, что кнопка находится поверх контента магазина */
+}
+
+.cross {
+    display: block;
+    width: 20px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: white;
+    transform-origin: center;
+    top: 10px;
+    right: 10px;
+}
+
+.cross:first-child {
+    transform: rotate(45deg);
+}
+
+.cross:last-child {
+    transform: rotate(-45deg);
+}
+
+#mainButton {
+    background-image: url("https://steamuserimages-a.akamaihd.net/ugc/952970256803582401/E56790D981D21F2D1F218910A6AE43FDF35143B3/?imw=512&amp;imh=384&amp;ima=fit&amp;impolicy=Letterbox&amp;imcolor=%23000000&amp;letterbox=true");
+    background-size: cover;
+}
+
